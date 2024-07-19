@@ -65,3 +65,24 @@ NEXT_PUBLIC_BACKEND_API_URL=http://localhost:5001
   - List all campaigns: `GET /campaign`
   - Edit a campaign: `PATCH /campaign/ba913a85-0d74-44bf-bde4-ba55b5e097d5`
 - The API collection is stored in the `docs` folder under the project's root directory.
+
+## Explanations of what was missed out:
+
+- Implementation of editing the campaign from the frontend is pending. However, the backend API endpoint to update the campaign is complete.
+- Adding multiple timings for a single weekday is not implemented in the frontend. However, the functionality is implemented in the backend API.
+
+## Explanations of any major decisions:
+
+- `Next scheduled activation` is kept optional.
+- Defining weekly timing is kept optional.
+- The data for the campaign is stored in memory and is not persisted to the database.
+
+## Explanations of any possible further improvements:
+
+- I can add a `status` field for a campaign. The current implementation defaults the `status` to `Scheduled`. We can have multiple statuses to indicate the progress of the campaign. We can store the history of statuses per campaign and show this history to restaurants on the web app.
+- I have added `title` and `tagline` to the campaign.
+- Add test cases.
+- Validation for dates and times can be added.
+- Persist the campaign to the database.
+- Improve frontend design.
+- Add authentication for restaurants.
