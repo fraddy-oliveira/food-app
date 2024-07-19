@@ -1,0 +1,14 @@
+.twoInputFieldsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.spacer {
+  height: 10px;
+}
+
+.weeklyScheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -8,7 +8,7 @@ export interface Campaign {
   campaignType: CampaignType;
   startDate: Date;
   endDate: Date;
-  nextScheduledActivationDate: Date | null;
+  nextScheduledActivationDate?: Date;
   timings: {
     weekday: WeekDay;
     startTime: string;

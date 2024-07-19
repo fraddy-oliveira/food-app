@@ -35,7 +35,7 @@ export default function CampaignsCard({
       )}
       {timings.length && <div>Weekly Schedule</div>}
       {timings.map((t) => (
-        <div>
+        <div key={t.weekday + t.startTime + t.endTime}>
           {t.weekday}: From {formatTime(t.startTime)} to {formatTime(t.endTime)}
         </div>
       ))}
