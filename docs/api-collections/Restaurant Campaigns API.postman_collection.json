@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "8410f91b-7c76-47b7-85b1-665a444470f6",
+		"name": "Restaurant Campaigns API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12950648"
+	},
+	"item": [
+		{
+			"name": "Campaigns",
+			"item": [
+				{
+					"name": "Create Campaign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Camp\",\n    \"tagline\": \"camp description\",\n    \"campaignType\": \"COST_PER_ORDER\",\n    \"startDate\": \"2024-09-11\",\n    \"endDate\": \"2024-09-15\",\n    \"nextActivationDate\": \"2024-09-20\",\n    \"timing\": [\n        {\n            \"weekday\": \"Monday\",\n            \"startTime\": \"12:00:00\",\n            \"endTime\": \"15:00:00\"\n        },\n        {\n            \"weekday\": \"Monday\",\n            \"startTime\": \"20:00:00\",\n            \"endTime\": \"22:00:00\"\n        },\n        {\n            \"weekday\": \"Tuesday\",\n            \"startTime\": \"16:00:00\",\n            \"endTime\": \"22:00:00\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/campaign",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Campaign",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Camp update ba913a85-0d74-44bf-bde4-ba55b5e097d5\",\n    \"campaignType\": \"BUY_ONE_GET_ONE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/campaign/ba913a85-0d74-44bf-bde4-ba55b5e097d5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campaign",
+								"ba913a85-0d74-44bf-bde4-ba55b5e097d5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Campaign",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/campaign",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"campaign"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
