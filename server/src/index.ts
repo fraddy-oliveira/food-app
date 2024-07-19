@@ -3,10 +3,13 @@ import express from "express";
 import CampaignService from "./services/campaign-service";
 import createCampaignMiddleware from "./middlewares/create-campaign-middleware";
 import AppError from "./utils/AppError";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 const port = process.env.PORT || 5001;
 
