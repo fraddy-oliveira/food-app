@@ -1,0 +1,5 @@
+export enum CampaignType {
+  COST_PER_ORDER = "COST_PER_ORDER",
+  COST_PER_CLICK = "COST_PER_CLICK",
+  BUY_ONE_GET_ONE = "BUY_ONE_GET_ONE",
+}
