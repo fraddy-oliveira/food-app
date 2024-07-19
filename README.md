@@ -56,3 +56,12 @@ NEXT_PUBLIC_BACKEND_API_URL=http://localhost:5001
 
 - Run `npm install` to install frontend dependencies.
 - Run `npm run dev` to start the frontend. The frontend should now be available at `http://localhost:3000`.
+
+## How to Access the Backend API?
+
+- The backend API is a REST API.
+- The following endpoints are available:
+  - Create a campaign: `POST /campaign`
+  - List all campaigns: `GET /campaign`
+  - Edit a campaign: `PATCH /campaign/ba913a85-0d74-44bf-bde4-ba55b5e097d5`
+- The API collection is stored in the `docs` folder under the project's root directory.
