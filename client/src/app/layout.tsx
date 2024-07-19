@@ -6,7 +6,7 @@ import Layout from "@app/components/Layout/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Restaurant app",
+  title: "Food app",
   description: "Schedule campaigns for restaurants",
 };
 
