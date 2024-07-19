@@ -1,0 +1,7 @@
+# Application
+.git/
+/dist/
+.env
+
+# Package manager
+/node_modules/

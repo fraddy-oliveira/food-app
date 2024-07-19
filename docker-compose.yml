@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: ./client
+      target: production
+      args:
+        - NODE_ENV=production
+        - NEXT_PUBLIC_BACKEND_API_URL=http://localhost:5001
+    image: frontend
+    container_name: frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      context: ./server
+      target: production
+    image: backend
+    container_name: backend
+    environment:
+      - PORT=5001
+    ports:
+      - "5001:5001"
