@@ -12,8 +12,8 @@ The application can be started using Docker or by explicitly starting it from th
 
 #### Prerequisite
 
-- Docker installation
-- Docker Compose installation
+- `Docker` installed on system
+- `Docker Compose` installed on system
 
 #### Steps
 
