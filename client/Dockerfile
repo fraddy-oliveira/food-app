@@ -20,7 +20,6 @@ ENV NODE_ENV production
 WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app/package*.json ./
 COPY --from=builder /usr/src/app/next.config.mjs ./
-COPY --from=builder /usr/src/app/public ./public
 COPY --from=builder /usr/src/app/build ./build
 RUN npm ci --production
 EXPOSE 3000
